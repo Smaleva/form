@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Форма входа и регистрации</title>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="form">
+        <nav class="link-wrapper">
+            <a href="#signup" class="link active">Регистрация</a>
+            <a href="#login" class="link">Войти</a>
+        </nav>
+
+        <div class="tab-content">
+            <div id="signup">
+                <h1>Пройти регистрацию</h1>
+                <form action="/" method="post">
+                    <div class="flex-row">
+                        <div class="field-wrap">
+                            <label>Фамилия</label>
+                            <input type="text" required autocomplete="off" placeholder="Иванов" name="firstname">
+                        </div>
+
+                        <div class="field-wrap">
+                            <label>Имя</label>
+                            <input type="text" required autocomplete="off" placeholder="Иван" name="lastname">
+                        </div>
+                        <div class="field-wrap">
+                            <label>Отчество</label>
+                            <input type="text" required autocomplete="off" placeholder="Иванович" name="patronymic">
+                        </div>
+                    </div>
+                    <div class="field-wrap">
+                        <label>Введите номер телефона</label>
+                        <input type="tel" required autocomplete="off" placeholder="Номер телефона" name="phone" maxlength="18">
+                    </div>
+                    <div class="field-wrap">
+                        <label>Введите Email</label>
+                        <input type="email" required autocomplete="off" placeholder="Email" name="email">
+                    </div>
+                    <div class="field-wrap">
+                        <label for="Sex">Ваш пол:</label>
+                        <input type="radio" value="man" name="Sex" autocomplete="off">Мужской
+                        <input type="radio" value="woman" name="Sex" autocomplete="off">Женский
+                    </div>
+                    <div class="field-wrap">
+                        <label>Введите пароль</label>
+                        <input type="password" required autocomplete="off" placeholder="Пароль" name="password">
+                    </div>
+                    <div class="field-wrap">
+                        <label>Вход по СМС</label>
+                        <input type="checkbox" name="SMS" id="SMS">
+                    </div>
+                    <button type="submit" class="button button-block">Зарегистрироваться</button>
+
+                </form>
+
+            </div>
+
+            <div id="login">
+                <h1>С возвращением!</h1>
+                <form action="/" method="post">
+                    <div class="field-wrap">
+                        <label>Введите логин</label>
+                        <input type="text" required autocomplete="off" placeholder="Логин" name="login">
+                    </div>
+
+                    <div class="field-wrap">
+                        <label>Введите пароль</label>
+                        <input type="password" required autocomplete="off" placeholder="Пароль" name="password">
+                    </div>
+                    
+                    <a href="#" class="forgot">Забыли пароль?</a>
+                    <button class="button button-block">Войти</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="js/script.js"></script>
+</body>
+</html>

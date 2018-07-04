@@ -1,0 +1,139 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* теги */
+body {
+  background: #c1bdba;
+  font-family: 'Titillium Web', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #1ab188;
+  transition: .5s ease;
+}
+h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 4%;
+}
+label {
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.25s ease;
+  pointer-events: none;
+  font-size: 22px;
+}
+label::after {
+  content: "*";
+  margin: 2px;
+  color: #1ab188;
+}
+input {
+  font-size: 22px;
+  width: 100%;
+  padding: 1% 2%;
+  background: transparent;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+/* классы */
+.field-wrap {
+  margin: 0 1% 4%;
+}
+
+.flex-row {
+  display: flex;  
+  justify-content: space-between;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 3% 0;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 3px;
+  background: #1ab188;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+}
+.forgot {
+  display: inline-block;
+}
+.form {
+  background: rgba(19, 35, 47, 0.9);
+  padding: 2%;
+  max-width: 700px;
+  margin: 2% auto;
+  border-radius: 0.5%;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.link-wrapper {
+  display: flex;
+  margin: 0 0 4% 0;
+}
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 20px;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s ease;
+}
+.link-wrapper a:hover {
+  background: #179b77;
+  color: #ffffff;
+}
+.link.active {
+  background: #1ab188;
+  color: #ffffff;
+}
+
+#login {
+  display: none;
+}
+
+
+
+
+
+/* состояния */
+a:hover {
+  color: #179b77;
+}
+input:focus {
+  outline: 0;
+  border-color: #1ab188;
+}
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder,
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder,
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder,
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder,
+input.placeholder:focus,
+textarea.placeholder:focus {
+  color: transparent !important;
+}
+.button:hover, .button:focus {
+  background: #179b77;
+}
+
