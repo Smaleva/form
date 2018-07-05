@@ -4,7 +4,7 @@
 
 /* теги */
 body {
-  background: #c1bdba;
+  background: #C1BDCF;
   font-family: 'Titillium Web', sans-serif;
 }
 a {
@@ -19,7 +19,7 @@ h1 {
   font-weight: 300;
   margin: 0 0 4%;
 }
-label {
+label, legend {
   color: rgba(255, 255, 255, 0.5);
   transition: all 0.25s ease;
   pointer-events: none;
@@ -45,12 +45,10 @@ input {
 .field-wrap {
   margin: 0 1% 4%;
 }
-
 .flex-row {
   display: flex;  
   justify-content: space-between;
 }
-
 .button {
   display: block;
   width: 100%;
@@ -66,10 +64,10 @@ input {
   background: #1ab188;
   color: #ffffff;
   transition: all 0.5s ease;
-  -webkit-appearance: none;
 }
 .forgot {
-  display: inline-block;
+  float: right;
+  margin: 0 1% 4%;
 }
 .form {
   background: rgba(19, 35, 47, 0.9);
@@ -79,7 +77,6 @@ input {
   border-radius: 0.5%;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
 }
-
 .link-wrapper {
   display: flex;
   margin: 0 0 4% 0;
@@ -100,12 +97,11 @@ input {
   background: #179b77;
   color: #ffffff;
 }
-.link.active {
+.active {
   background: #1ab188;
   color: #ffffff;
 }
-
-#login {
+.none {
   display: none;
 }
 
