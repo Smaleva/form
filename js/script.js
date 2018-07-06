@@ -16,11 +16,12 @@ linkLog.addEventListener("click", function (e) {
         linkLog.classList.add("active"),
         linkSign.classList.remove("active");
 });
-function validateForm() {
-    var password = document.getElementById('password');
-    var checkPass = document.getElementById('checkPass');
+var password = document.getElementById('password'),
+    submit = document.getElementById('submit'),
+    checkPass = document.getElementById('checkPass');
+submit.addEventListener("click", function () {
     if (password.value !== checkPass.value) {
         alert('Проверьте пароли!');
         return false;
     }
-}
+});
