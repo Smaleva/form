@@ -21,7 +21,7 @@
         <div class="tab-content">
             <div id="signup">
                 <h1>Пройти регистрацию</h1>
-                <form action="/" method="post">
+                <form action="" method="get">
                     <div class="flex-row">
                         <div class="field-wrap">
                             <label>Фамилия</label>
@@ -47,20 +47,53 @@
                     </div>
                     <div class="field-wrap sex-box">
                         <legend>Ваш пол:</legend>
-                        <input type="radio" value="man" id="M" name="Sex" autocomplete="off" checked>
-                        <label for="M">Мужской</label>
-                        <input type="radio" value="woman" id="W" name="Sex" autocomplete="off">
-                        <label for="W">Женский</label>
+                        <input type="radio" value="man" id="man" name="Sex" checked>
+                        <label for="man">Мужской</label>
+                        <input type="radio" value="woman" id="woman" name="Sex">
+                        <label for="woman">Женский</label>
+                    </div>
+                    <div class="field-wrap country-wrap">
+                        <legend>Выбор страны</legend>
+                        <div class="country-box">
+                            <input type="radio" name="country" id="Russia" value="Russia">
+                            <label for="Russia">Россия</label>
+                            <input type="radio" name="country" id="Canada" value="Canada">
+                            <label for="Canada">Канада</label>
+                            <input type="radio" name="country" id="China" value="China">
+                            <label for="China">Китай</label>
+                            <input type="radio" name="country" id="USA" value="USA">
+                            <label for="USA">США</label>
+                            <input type="radio" name="country" id="Brasil" value="Brasil">
+                            <label for="Brasil">Бразилия</label>
+                            <input type="radio" name="country" id="Australia" value="Australia">
+                            <label for="Australia">Австралия</label>
+                            <input type="radio" name="country" id="India" value="India">
+                            <label for="India">Индия</label>
+                            <input type="radio" name="country" id="Argentina" value="Argentina">
+                            <label for="Argentina">Аргентина</label>
+                            <input type="radio" name="country" id="Kazakhstan" value="Kazakhstan">
+                            <label for="Kazakhstan">Казахстан</label>
+                            <input type="radio" name="country" id="Mexico" value="Mexico">
+                            <label for="Mexico">Мексика</label>
+                        </div>
                     </div>
                     <div class="field-wrap">
-                        <label>Введите пароль</label>
-                        <input type="password" required autocomplete="off" placeholder="Пароль" name="password">
+                        <label>Введите логин</label>
+                        <input type="text" required placeholder="Логин" name="login">
                     </div>
                     <div class="field-wrap">
-                        <label>Вход по СМС</label>
-                        <input type="checkbox" name="SMS" id="SMS">
+                        <label for="password">Введите пароль</label>
+                        <input type="password" required placeholder="Пароль" name="password" id="password">
                     </div>
-                    <button type="submit" class="button button-block">Зарегистрироваться</button>
+                    <div class="field-wrap">
+                        <label for="checkPass">Подтвердите пароль</label>
+                        <input type="password" required placeholder="Пароль" name="checkPass" id="checkPass">
+                    </div>
+                    <div class="field-wrap auth-sms">
+                        <input type="checkbox" name="SMS" id="SMS" checked>
+                        <label for="SMS">Вход по СМС</label>
+                    </div>
+                    <button type="submit" class="button button-block" onclick="return validateForm()">Зарегистрироваться</button>
 
                 </form>
 
@@ -68,15 +101,15 @@
 
             <div id="login" class="none">
                 <h1>С возвращением!</h1>
-                <form action="/" method="post">
+                <form action="" method="get">
                     <div class="field-wrap">
                         <label>Введите логин</label>
-                        <input type="text" required autocomplete="off" placeholder="Логин" name="login">
+                        <input type="text" required placeholder="Логин" name="login">
                     </div>
 
                     <div class="field-wrap">
                         <label>Введите пароль</label>
-                        <input type="password" required autocomplete="off" placeholder="Пароль" name="password">
+                        <input type="password" required placeholder="Пароль" name="password">
                     </div>
                     
                     <a href="#" class="forgot">Забыли пароль?</a>

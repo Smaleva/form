@@ -15,4 +15,12 @@ linkLog.addEventListener("click", function (e) {
         formLog.classList.remove("none"),
         linkLog.classList.add("active"),
         linkSign.classList.remove("active");
-}); 
+});
+function validateForm() {
+    var password = document.getElementById('password');
+    var checkPass = document.getElementById('checkPass');
+    if (password.value !== checkPass.value) {
+        alert('Проверьте пароли!');
+        return false;
+    }
+}

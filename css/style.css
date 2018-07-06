@@ -22,7 +22,6 @@ h1 {
 label, legend {
   color: #8e6abd;
   transition: all 0.25s ease;
-  pointer-events: none;
   font-size: 22px;
   position: relative;
 }
@@ -101,12 +100,12 @@ legend {
 .none {
   display: none;
 }
-.sex-box label {
+.sex-box label, .country-box label, .auth-sms label {
   font-size: 18px;
-  margin: 1%;
   padding: 0 0 0 5%;
+  cursor: pointer;
 }
-.sex-box input:checked+label::before {
+.sex-box input:checked+label::before, .country-box input:checked+label::before {
   content: "";
   position: absolute;
   top: 0;
@@ -115,9 +114,9 @@ legend {
   height: 16px;
   background: #8e6abd;
   border-radius: 50%;
-  transform: translate(37%,39%);
+  transform: translate(13%,15%);
 }
-.sex-box label::after {
+.sex-box label::after, .country-box label::after {
   content: "";
   position: absolute;
   top: 0;
@@ -126,11 +125,36 @@ legend {
   height: 20px;
   border: 1px solid #8e6abd;
   border-radius: 50%; 
+}
+.auth-sms label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #8e6abd;
+  border-radius: 2%; 
   transform: translate(20%,20%);
 }
-
-
-
+.auth-sms input:checked+label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: #8e6abd;
+  border-radius: 2%;
+  transform: translate(37%,39%);
+}
+.country-box label {
+  margin: 1% 0;
+}
+.country-box {
+  display: flex;
+  flex-direction: column;
+}
 /* состояния */
 a:hover {
   color: #8e6abd;
