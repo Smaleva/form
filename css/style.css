@@ -9,7 +9,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: #1ab188;
+  color: #a67eda;
   transition: .5s ease;
 }
 h1 {
@@ -20,27 +20,28 @@ h1 {
   margin: 0 0 4%;
 }
 label, legend {
-  color: rgba(255, 255, 255, 0.5);
+  color: #8e6abd;
   transition: all 0.25s ease;
   pointer-events: none;
   font-size: 22px;
-}
-label::after {
-  content: "*";
-  margin: 2px;
-  color: #1ab188;
+  position: relative;
 }
 input {
   font-size: 22px;
   width: 100%;
   padding: 1% 2%;
   background: transparent;
-  border: 1px solid #a0b3b0;
+  border: 1px solid #b099ce;
   color: #ffffff;
   border-radius: 0;
   transition: border-color .25s ease, box-shadow .25s ease;
 }
-
+input[type="radio"], input[type="checkbox"] {
+  display: none;
+}
+legend {
+  margin: 0 0 4%;
+}
 /* классы */
 .field-wrap {
   margin: 0 1% 4%;
@@ -61,7 +62,7 @@ input {
   text-transform: uppercase;
   cursor: pointer;
   letter-spacing: 3px;
-  background: #1ab188;
+  background: #a67eda;
   color: #ffffff;
   transition: all 0.5s ease;
 }
@@ -70,7 +71,7 @@ input {
   margin: 0 1% 4%;
 }
 .form {
-  background: rgba(19, 35, 47, 0.9);
+  background: #e0e6eae6;
   padding: 2%;
   max-width: 700px;
   margin: 2% auto;
@@ -85,37 +86,58 @@ input {
   display: inline-block;
   text-decoration: none;
   padding: 15px;
-  background: rgba(160, 179, 176, 0.25);
-  color: #a0b3b0;
+  background: #a67eda82;
+  color: #8e6abd;
   font-size: 20px;
   width: 50%;
   text-align: center;
   cursor: pointer;
   transition: .5s ease;
 }
-.link-wrapper a:hover {
-  background: #179b77;
-  color: #ffffff;
-}
 .active {
-  background: #1ab188;
+  background: #a67eda;
   color: #ffffff;
 }
 .none {
   display: none;
 }
-
-
+.sex-box label {
+  font-size: 18px;
+  margin: 1%;
+  padding: 0 0 0 5%;
+}
+.sex-box input:checked+label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: #8e6abd;
+  border-radius: 50%;
+  transform: translate(37%,39%);
+}
+.sex-box label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #8e6abd;
+  border-radius: 50%; 
+  transform: translate(20%,20%);
+}
 
 
 
 /* состояния */
 a:hover {
-  color: #179b77;
+  color: #8e6abd;
 }
 input:focus {
   outline: 0;
-  border-color: #1ab188;
+  border-color: #8e6abd;
 }
 input:focus::-moz-placeholder,
 textarea:focus::-moz-placeholder,
@@ -130,6 +152,9 @@ textarea.placeholder:focus {
   color: transparent !important;
 }
 .button:hover, .button:focus {
-  background: #179b77;
+  background: #8e6abd;
 }
-
+.link-wrapper a:hover {
+  background: #8e6abd;
+  color: #ffffff;
+}
