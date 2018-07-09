@@ -199,6 +199,16 @@ input[type=checkbox],
   border: 1px solid #8e6abd;
   border-radius: 50%;
 }
+.form .sex-box label::after, .form .sex-box label::before {
+  transform: translate(20%, 20%);
+  -webkit-transform: translate(20%, 20%);
+  -ms-transform: translate(20%, 20%);
+}
+.form .sex-box input:checked + label::before {
+  transform: translate(37%, 37%);
+  -webkit-transform: translate(37%, 37%);
+  -ms-transform: translate(37%, 37%);
+}
 .form .auth-sms label::after {
   width: 20px;
   height: 20px;

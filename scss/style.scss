@@ -6,37 +6,24 @@ $back_1: transparent;
 $back_2: rgba(224, 230, 234, 0.9019607843);
 $font: 'Titillium Web',sans-serif;
 $border: 1px solid #8e6abd;
-$b_r: 0;
-$b_r_1: 0.5%;
-$txt_decor: none;
-$txt_c: center;
 $fz32: 32px;
 $fz22: 22px;
 $fz18: 18px;
-$pos_r: relative;
-$pos_a: absolute;
-$w_100: 100%;
-$w_50: 50%;
-$w_40: 40%;
-$d_f: flex;
-$d_n: none;
-$d_i: inline-block;
-$b_s: border-box;
 $b_shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
-$jc_sb: space-between;
 $m_3: 3%;
 $m_1: 1%;
 $m_2: 2%;
-$ttu: uppercase;
 $p_3: 3%;
 $p_2: 2%;
 $p_5: 5%;
-$c_p: pointer;
+$transition: .5s ease;
+$transition_1: 0.25s ease;
+
 *,
 *::before,
 *::after {
-    box-sizing: $b_s;
-    -webkit-box-sizing: $b_s;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 body {
@@ -46,15 +33,15 @@ body {
 
 a {
     color: $color_1;
-    text-decoration: $txt_decor;
-    transition: .5s ease;
-    -webkit-transition: .5s ease;
-    -o-transition: .5s ease;
+    text-decoration: none;
+    transition: $transition;
+    -webkit-transition: $transition;
+    -o-transition: $transition;
 }
 
 h1 {
     color: $color_2;
-    text-align: $txt_c;
+    text-align: center;
     font-size: $fz32;
     font-weight: 300;
 }
@@ -73,35 +60,35 @@ input {
 label,
 legend {
     color: $color_3;
-    position: $pos_r;
-    transition: all 0.25s ease;
-    -webkit-transition: all 0.25s ease;
-    -o-transition: all 0.25s ease;
+    position: relative;
+    transition: all $transition_1;
+    -webkit-transition: all $transition_1;
+    -o-transition: all $transition_1;
 }
 
 input {
-    width: $w_100;
+    width: 100%;
     background: $back_1;
     border: $border;
     color: $color_2;
-    border-radius: $b_r;
+    border-radius: 0;
     padding: 1% $p_2;
-    transition: border-color .25s ease, box-shadow .25s ease;
-    transition: border-color .25s ease, box-shadow .25s ease, -webkit-box-shadow .25s ease;
-    transition: border-color .25s ease, -webkit-box-shadow .25s ease;
-    -webkit-transition: border-color .25s ease, -webkit-box-shadow .25s ease;
-    -o-transition: border-color .25s ease, box-shadow .25s ease;
+    transition: border-color $transition_1, box-shadow $transition_1;
+    transition: border-color $transition_1, box-shadow $transition_1, -webkit-box-shadow $transition_1;
+    transition: border-color $transition_1, -webkit-box-shadow $transition_1;
+    -webkit-transition: border-color $transition_1, -webkit-box-shadow $transition_1;
+    -o-transition: border-color $transition_1, box-shadow $transition_1;
 }
 
 input[type="radio"],
 input[type="checkbox"],
 .none {
-    display: $d_n;
+    display: none;
 }
 
 .flex-row {
-    display: $d_f;
-    justify-content: $jc_sb;
+    display: flex;
+    justify-content: space-between;
 }
 
 .field-wrap {
@@ -109,33 +96,33 @@ input[type="checkbox"],
 }
 
 .button {
-    width: $w_100;
-    border: $b_r;
+    width: 100%;
+    border: 0;
     font-size: $fz32;
     background: $color_1;
     color: $color_2;
-    text-transform: $ttu;
+    text-transform: uppercase;
     letter-spacing: 3px;
     padding: $p_3 0;
-    cursor: $c_p;
+    cursor: pointer;
     font-weight: 600;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all $transition;
+    -o-transition: all $transition;
+    transition: all $transition;
 }
 
 .form {
-    width: $w_40;
+    width: 40%;
     padding: $p_2;
     min-width: 750px;
     background: $back_2;
     margin: $m_2 auto;
-    border-radius: $b_r_1;
+    border-radius: 0.5%;
     z-index: 1;
     box-shadow: $b_shadow;
     -webkit-box-shadow: $b_shadow;
     .link-wrapper {
-        display: $d_f;
+        display: flex;
         margin: 0 0 $m_3 0;
         .active {
             background: $color_1;
@@ -143,27 +130,27 @@ input[type="checkbox"],
         }
     }
     .link {
-        display: $d_i;
-        text-decoration: $txt_decor;
+        display: inline-block;
+        text-decoration: none;
         padding: $p_2;
         background: rgba(166, 126, 218, 0.5098039216);
         color: $color_3;
         font-size: $fz22;
-        width: $w_50;
-        text-align: $txt_c;
-        cursor: $c_p;
-        -webkit-transition: .5s ease;
-        -o-transition: .5s ease;
-        transition: .5s ease;
+        width: 50%;
+        text-align: center;
+        cursor: pointer;
+        -webkit-transition: $transition;
+        -o-transition: $transition;
+        transition: $transition;
         @media screen and (max-width: 600px) {
-            width: $w_100;
+            width: 100%;
             font-size: inherit;
         }
     }
     .sex-box label,
     .country-box label,
     .auth-sms label {
-        cursor: $c_p;
+        cursor: pointer;
         font-size: $fz18;
         padding: 0 0 0 $p_5;
         @media screen and (max-width: 600px) {
@@ -181,18 +168,18 @@ input[type="checkbox"],
         margin: $m_1 0;
     }
     .country-wrap {
-        position: $pos_r;
+        position: relative;
         .country-box {
-            position: $pos_a;
+            position: absolute;
             z-index: 2;
-            width: $w_50;
+            width: 50%;
             background: $back_2;
             box-shadow: $b_shadow;
             -webkit-box-shadow: $b_shadow;
             padding: $m_1;
             flex-direction: column;
             @media screen and (max-width: 600px) {
-                width: $w_100;
+                width: 100%;
             }
         }
     }
@@ -202,7 +189,7 @@ input[type="checkbox"],
     .country-box label::after,
     .auth-sms label::after,
     .auth-sms input:checked+label::before {
-        position: $pos_a;
+        position: absolute;
         content: "";
         top: 0;
         left: 0;
@@ -212,7 +199,7 @@ input[type="checkbox"],
         background: $color_3;
         width: 16px;
         height: 16px;
-        border-radius: $w_50;
+        border-radius: 50%;
         transform: translate(13%, 15%);
         -webkit-transform: translate(13%, 15%);
         -ms-transform: translate(13%, 15%);
@@ -222,7 +209,17 @@ input[type="checkbox"],
         width: 20px;
         height: 20px;
         border: $border;
-        border-radius: $w_50;
+        border-radius: 50%;
+    }
+    .sex-box label::after, .sex-box label::before {
+        transform: translate(20%, 20%);
+        -webkit-transform: translate(20%, 20%);
+        -ms-transform: translate(20%, 20%);
+    }
+    .sex-box input:checked + label::before {
+        transform: translate(37%, 37%);
+        -webkit-transform: translate(37%, 37%);
+        -ms-transform: translate(37%, 37%);
     }
     .auth-sms label::after {
         width: 20px;
@@ -245,7 +242,7 @@ input[type="checkbox"],
 }
 
 .flex {
-    display: $d_f;
+    display: flex;
 }
 
 .forgot {
