@@ -4,16 +4,16 @@ var linkSign = document.querySelector(".signup"),
     formLog = document.querySelector("#login");
 linkSign.addEventListener("click", function (e) {
     e.preventDefault(),
-        formSign.classList.remove("none"),
-        formLog.classList.add("none"),
-        linkLog.classList.remove("active"),
+        formSign.classList.remove("none");
+        formLog.classList.add("none");
+        linkLog.classList.remove("active");
         linkSign.classList.add("active");
 });
 linkLog.addEventListener("click", function (e) {
     e.preventDefault(),
-        formSign.classList.add("none"),
-        formLog.classList.remove("none"),
-        linkLog.classList.add("active"),
+        formSign.classList.add("none");
+        formLog.classList.remove("none");
+        linkLog.classList.add("active");
         linkSign.classList.remove("active");
 });
 var buttonCountry = document.querySelector("#country"),
