@@ -17,12 +17,20 @@ linkLog.addEventListener("click", function (e) {
         linkSign.classList.remove("active");
 });
 var buttonCountry = document.querySelector("#country"),
-    blockCountry = document.querySelector(".country-box");
+    blockCountry = document.querySelector(".country-box"),
+    countryInput = document.getElementsByClassName("country-item");
 buttonCountry.addEventListener("click", function (e) {
     e.preventDefault(),
         blockCountry.classList.remove("none");
         blockCountry.classList.add("flex");
 });
+for (var i = 0; i < countryInput.length; i++) {
+    countryInput[i].addEventListener("change", function(e) {
+        e.preventDefault(),
+        blockCountry.classList.remove("flex");
+        blockCountry.classList.add("none");
+    });
+};
 var password = document.getElementById('password'),
     submit = document.getElementById('submit'),
     checkPass = document.getElementById('checkPass');

@@ -107,6 +107,9 @@ legend {
   padding: 0 0 0 5%;
   cursor: pointer;
 }
+.country-box label {
+  padding: 0 0 0 7%;
+}
 .sex-box input:checked+label::before, .country-box input:checked+label::before {
   content: "";
   position: absolute;
@@ -150,17 +153,20 @@ legend {
   border-radius: 2%;
   transform: translate(37%,39%);
 }
+.country-wrap {
+  position: relative;
+}
 .country-box label {
   margin: 1% 0;
 }
 .country-box {
   flex-direction: column;
   position: absolute;
-  width: 100%;
+  width: 50%;
   z-index: 2;
   background: #e0e6eae6;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
-  max-width: 345px;
+  padding: 1%;
 }
 .flex {
   display: flex;
@@ -206,13 +212,13 @@ textarea.placeholder:focus {
   .link-wrapper, .flex-row {
     flex-direction: column;
   }
-  .link {
+  .link, .country-box {
     width: 100%;
   }
   .button, h1, label, legend, input, .sex-box label, .country-box label, .auth-sms label {
     font-size: inherit; 
   }
-  .sex-box label, .country-box label, .auth-sms label {
+  .sex-box label, .auth-sms label {
     padding: 0 0 0 7%;
   }
 }
