@@ -16,6 +16,13 @@ linkLog.addEventListener("click", function (e) {
         linkLog.classList.add("active"),
         linkSign.classList.remove("active");
 });
+var buttonCountry = document.querySelector("#country"),
+    blockCountry = document.querySelector(".country-box");
+buttonCountry.addEventListener("click", function (e) {
+    e.preventDefault(),
+        blockCountry.classList.remove("none");
+        blockCountry.classList.add("flex");
+});
 var password = document.getElementById('password'),
     submit = document.getElementById('submit'),
     checkPass = document.getElementById('checkPass');

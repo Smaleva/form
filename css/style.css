@@ -77,6 +77,7 @@ legend {
   margin: 2% auto;
   border-radius: 0.5%;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  z-index: 1;
 }
 .link-wrapper {
   display: flex;
@@ -153,8 +154,19 @@ legend {
   margin: 1% 0;
 }
 .country-box {
-  display: flex;
   flex-direction: column;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  background: #e0e6eae6;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  max-width: 345px;
+}
+.flex {
+  display: flex;
+}
+button.link {
+  position: relative;
 }
 /* состояния */
 a:hover {
@@ -179,7 +191,7 @@ textarea.placeholder:focus {
 .button:hover, .button:focus {
   background: #8e6abd;
 }
-.link-wrapper a:hover {
+.link-wrapper a:hover, button.link:hover, button.link:focus {
   background: #8e6abd;
   color: #ffffff;
 }
