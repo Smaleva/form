@@ -1,0 +1,318 @@
+$color_1: #a67eda;
+$color_2: #ffffff;
+$color_3: #8e6abd;
+$back: #C1BDCF;
+$back_1: transparent;
+$back_2: rgba(224, 230, 234, 0.9019607843);
+$font: 'Titillium Web',sans-serif;
+$border: 1px solid #8e6abd;
+$b_r: 0;
+$b_r_1: 0.5%;
+$txt_decor: none;
+$txt_c: center;
+$fz32: 32px;
+$fz22: 22px;
+$fz18: 18px;
+$pos_r: relative;
+$pos_a: absolute;
+$w_100: 100%;
+$w_50: 50%;
+$w_40: 40%;
+$d_f: flex;
+$d_n: none;
+$d_i: inline-block;
+$b_s: border-box;
+$b_shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+$jc_sb: space-between;
+$m_3: 3%;
+$m_1: 1%;
+$m_2: 2%;
+$ttu: uppercase;
+$p_3: 3%;
+$p_2: 2%;
+$p_5: 5%;
+$c_p: pointer;
+*,
+*::before,
+*::after {
+    box-sizing: $b_s;
+    -webkit-box-sizing: $b_s;
+}
+
+body {
+    font-family: $font;
+    background: $back;
+}
+
+a {
+    color: $color_1;
+    text-decoration: $txt_decor;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+}
+
+h1 {
+    color: $color_2;
+    text-align: $txt_c;
+    font-size: $fz32;
+    font-weight: 300;
+}
+
+h1,
+legend {
+    margin-bottom: $m_3;
+}
+
+label,
+legend,
+input {
+    font-size: $fz22;
+}
+
+label,
+legend {
+    color: $color_3;
+    position: $pos_r;
+    transition: all 0.25s ease;
+    -webkit-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+}
+
+input {
+    width: $w_100;
+    background: $back_1;
+    border: $border;
+    color: $color_2;
+    border-radius: $b_r;
+    padding: 1% $p_2;
+    transition: border-color .25s ease, box-shadow .25s ease;
+    transition: border-color .25s ease, box-shadow .25s ease, -webkit-box-shadow .25s ease;
+    transition: border-color .25s ease, -webkit-box-shadow .25s ease;
+    -webkit-transition: border-color .25s ease, -webkit-box-shadow .25s ease;
+    -o-transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+input[type="radio"],
+input[type="checkbox"],
+.none {
+    display: $d_n;
+}
+
+.flex-row {
+    display: $d_f;
+    justify-content: $jc_sb;
+}
+
+.field-wrap {
+    margin: $m_3 $m_1;
+}
+
+.button {
+    width: $w_100;
+    border: $b_r;
+    font-size: $fz32;
+    background: $color_1;
+    color: $color_2;
+    text-transform: $ttu;
+    letter-spacing: 3px;
+    padding: $p_3 0;
+    cursor: $c_p;
+    font-weight: 600;
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.form {
+    width: $w_40;
+    padding: $p_2;
+    min-width: 750px;
+    background: $back_2;
+    margin: $m_2 auto;
+    border-radius: $b_r_1;
+    z-index: 1;
+    box-shadow: $b_shadow;
+    -webkit-box-shadow: $b_shadow;
+    .link-wrapper {
+        display: $d_f;
+        margin: 0 0 $m_3 0;
+        .active {
+            background: $color_1;
+            color: $color_2;
+        }
+    }
+    .link {
+        display: $d_i;
+        text-decoration: $txt_decor;
+        padding: $p_2;
+        background: rgba(166, 126, 218, 0.5098039216);
+        color: $color_3;
+        font-size: $fz22;
+        width: $w_50;
+        text-align: $txt_c;
+        cursor: $c_p;
+        -webkit-transition: .5s ease;
+        -o-transition: .5s ease;
+        transition: .5s ease;
+        @media screen and (max-width: 600px) {
+            width: $w_100;
+            font-size: inherit;
+        }
+    }
+    .sex-box label,
+    .country-box label,
+    .auth-sms label {
+        cursor: $c_p;
+        font-size: $fz18;
+        padding: 0 0 0 $p_5;
+        @media screen and (max-width: 600px) {
+            padding: 0 0 0 8%;
+            font-size: inherit;
+        }
+    }
+    .auth-sms label {
+        @media screen and (max-width: 600px) {
+            padding: $m_1 0 0 10%;
+        }
+    }
+    .country-box label {
+        padding: 0 0 0 7%;
+        margin: $m_1 0;
+    }
+    .country-wrap {
+        position: $pos_r;
+        .country-box {
+            position: $pos_a;
+            z-index: 2;
+            width: $w_50;
+            background: $back_2;
+            box-shadow: $b_shadow;
+            -webkit-box-shadow: $b_shadow;
+            padding: $m_1;
+            flex-direction: column;
+            @media screen and (max-width: 600px) {
+                width: $w_100;
+            }
+        }
+    }
+    .sex-box input:checked+label::before,
+    .country-box input:checked+label::before,
+    .sex-box label::after,
+    .country-box label::after,
+    .auth-sms label::after,
+    .auth-sms input:checked+label::before {
+        position: $pos_a;
+        content: "";
+        top: 0;
+        left: 0;
+    }
+    .sex-box input:checked+label::before,
+    .country-box input:checked+label::before {
+        background: $color_3;
+        width: 16px;
+        height: 16px;
+        border-radius: $w_50;
+        transform: translate(13%, 15%);
+        -webkit-transform: translate(13%, 15%);
+        -ms-transform: translate(13%, 15%);
+    }
+    .sex-box label::after,
+    .country-box label::after {
+        width: 20px;
+        height: 20px;
+        border: $border;
+        border-radius: $w_50;
+    }
+    .auth-sms label::after {
+        width: 20px;
+        height: 20px;
+        border: $border;
+        border-radius: $p_2;
+        transform: translate(20%, 20%);
+        -webkit-transform: translate(20%, 20%);
+        -ms-transform: translate(20%, 20%);
+    }
+    .auth-sms input:checked+label::before {
+        width: 16px;
+        height: 16px;
+        background: $color_3;
+        border-radius: $p_2;
+        transform: translate(37%, 39%);
+        -webkit-transform: translate(37%, 39%);
+        -ms-transform: translate(37%, 39%);
+    }
+}
+
+.flex {
+    display: $d_f;
+}
+
+.forgot {
+    float: right;
+    margin: 0 $m_1 $m_3;
+}
+
+a:hover {
+    color: $color_3;
+}
+
+input:focus {
+    border-color: $color_3;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder,
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder,
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder,
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder,
+input.placeholder:focus,
+textarea.placeholder:focus {
+    color: $back_1;
+}
+
+.button:hover,
+.button:focus {
+    background: $color_3;
+}
+
+.link-wrapper a:hover,
+button.link:hover,
+button.link:focus {
+    background: $color_3;
+    color: $color_2;
+}
+
+@media screen and (max-width: 768px) {
+    .form {
+        width: 97%;
+        min-width: inherit;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .link-wrapper,
+    .flex-row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .button,
+    h1,
+    label,
+    legend,
+    input {
+        font-size: inherit;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .button {
+        letter-spacing: 1px;
+    }
+}

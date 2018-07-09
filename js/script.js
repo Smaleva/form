@@ -31,12 +31,12 @@ for (var i = 0; i < countryInput.length; i++) {
         blockCountry.classList.add("none");
     });
 };
-var password = document.getElementById('password'),
-    submit = document.getElementById('submit'),
-    checkPass = document.getElementById('checkPass');
+var password = document.getElementById("password"),
+    submit = document.getElementById("submit"),
+    checkPass = document.getElementById("checkPass");
 submit.addEventListener("click", function () {
     if (password.value !== checkPass.value) {
-        alert('Проверьте пароли!');
+        alert("Проверьте пароли!");
         return false;
     }
 });
