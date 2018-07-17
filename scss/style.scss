@@ -29,245 +29,230 @@ $transition_1: 0.25s ease;
 body {
     font-family: $font;
     background: $back;
-}
-
-a {
-    color: $color_1;
-    text-decoration: none;
-    transition: $transition;
-    -webkit-transition: $transition;
-    -o-transition: $transition;
-}
-
-h1 {
-    color: $color_2;
-    text-align: center;
-    font-size: $fz32;
-    font-weight: 300;
-}
-
-h1,
-legend {
-    margin-bottom: $m_3;
-}
-
-label,
-legend,
-input {
-    font-size: $fz22;
-}
-
-label,
-legend {
-    color: $color_3;
-    position: relative;
-    transition: all $transition_1;
-    -webkit-transition: all $transition_1;
-    -o-transition: all $transition_1;
-}
-
-input {
-    width: 100%;
-    background: $back_1;
-    border: $border;
-    color: $color_2;
-    border-radius: 0;
-    padding: 1% $p_2;
-    transition: border-color $transition_1, box-shadow $transition_1;
-    transition: border-color $transition_1, box-shadow $transition_1, -webkit-box-shadow $transition_1;
-    transition: border-color $transition_1, -webkit-box-shadow $transition_1;
-    -webkit-transition: border-color $transition_1, -webkit-box-shadow $transition_1;
-    -o-transition: border-color $transition_1, box-shadow $transition_1;
-}
-
-input[type="radio"],
-input[type="checkbox"],
-.none {
-    display: none;
-}
-
-.flex-row {
-    display: flex;
-    justify-content: space-between;
-}
-
-.field-wrap {
-    margin: $m_3 $m_1;
-}
-
-.button {
-    width: 100%;
-    border: 0;
-    font-size: $fz32;
-    background: $color_1;
-    color: $color_2;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    padding: $p_3 0;
-    cursor: pointer;
-    font-weight: 600;
-    -webkit-transition: all $transition;
-    -o-transition: all $transition;
-    transition: all $transition;
-}
-
-.form {
-    width: 40%;
-    padding: $p_2;
-    min-width: 750px;
-    background: $back_2;
-    margin: $m_2 auto;
-    border-radius: 0.5%;
-    z-index: 1;
-    box-shadow: $b_shadow;
-    -webkit-box-shadow: $b_shadow;
-    .link-wrapper {
-        display: flex;
-        margin: 0 0 $m_3 0;
-        .active {
-            background: $color_1;
-            color: $color_2;
-        }
-    }
-    .link {
-        display: inline-block;
+    a {
+        color: $color_1;
         text-decoration: none;
-        padding: $p_2;
-        background: rgba(166, 126, 218, 0.5098039216);
-        color: $color_3;
-        font-size: $fz22;
-        width: 50%;
-        text-align: center;
-        cursor: pointer;
+        transition: $transition;
         -webkit-transition: $transition;
         -o-transition: $transition;
-        transition: $transition;
-        @media screen and (max-width: 600px) {
-            width: 100%;
-            font-size: inherit;
+        &:hover {
+            color: $color_3;
         }
     }
-    .sex-box label,
-    .country-box label,
-    .auth-sms label {
-        cursor: pointer;
-        font-size: $fz18;
-        padding: 0 0 0 $p_5;
-        @media screen and (max-width: 600px) {
-            padding: 0 0 0 8%;
-            font-size: inherit;
+    h1 {
+        color: $color_2;
+        text-align: center;
+        font: {
+            size: $fz32;
+            weight: 300;
         }
     }
-    .auth-sms label {
-        @media screen and (max-width: 600px) {
-            padding: $m_1 0 0 10%;
-        }
+    h1,
+    legend {
+        margin-bottom: $m_3;
     }
-    .country-box label {
-        padding: 0 0 0 7%;
-        margin: $m_1 0;
+    label,
+    legend,
+    input {
+        font-size: $fz22;
     }
-    .country-wrap {
+    label,
+    legend {
+        color: $color_3;
         position: relative;
-        .country-box {
-            position: absolute;
-            z-index: 2;
-            width: 50%;
-            background: $back_2;
-            box-shadow: $b_shadow;
-            -webkit-box-shadow: $b_shadow;
-            padding: $m_1;
-            flex-direction: column;
-            @media screen and (max-width: 600px) {
-                width: 100%;
+        transition: all $transition_1;
+        -webkit-transition: all $transition_1;
+        -o-transition: all $transition_1;
+    }
+    input {
+        width: 100%;
+        background: $back_1;
+        border: $border;
+        color: $color_2;
+        border-radius: 0;
+        padding: 1% $p_2;
+        transition: border-color $transition_1, box-shadow $transition_1;
+        transition: border-color $transition_1, box-shadow $transition_1, -webkit-box-shadow $transition_1;
+        transition: border-color $transition_1, -webkit-box-shadow $transition_1;
+        -webkit-transition: border-color $transition_1, -webkit-box-shadow $transition_1;
+        -o-transition: border-color $transition_1, box-shadow $transition_1;
+    }
+    input[type="radio"],
+    input[type="checkbox"],
+    .none {
+        display: none;
+    }
+    .form {
+        width: 40%;
+        padding: $p_2;
+        min-width: 750px;
+        background: $back_2;
+        margin: $m_2 auto;
+        border-radius: 0.5%;
+        z-index: 1;
+        box-shadow: $b_shadow;
+        -webkit-box-shadow: $b_shadow;
+        .link-wrapper {
+            @extend .flex;
+            margin: 0 0 $m_3 0;
+            .active {
+                background: $color_1;
+                color: $color_2;
             }
         }
-    }
-    .sex-box input:checked+label::before,
-    .country-box input:checked+label::before,
-    .sex-box label::after,
-    .country-box label::after,
-    .auth-sms label::after,
-    .auth-sms input:checked+label::before {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-    }
-    .sex-box input:checked+label::before,
-    .country-box input:checked+label::before {
-        background: $color_3;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        transform: translate(13%, 15%);
-        -webkit-transform: translate(13%, 15%);
-        -ms-transform: translate(13%, 15%);
-    }
-    .sex-box label::after,
-    .country-box label::after {
-        width: 20px;
-        height: 20px;
-        border: $border;
-        border-radius: 50%;
-    }
-    .sex-box label::after, .sex-box label::before {
-        transform: translate(20%, 20%);
-        -webkit-transform: translate(20%, 20%);
-        -ms-transform: translate(20%, 20%);
-    }
-    .sex-box input:checked + label::before {
-        transform: translate(37%, 37%);
-        -webkit-transform: translate(37%, 37%);
-        -ms-transform: translate(37%, 37%);
-    }
-    .auth-sms label::after {
-        width: 20px;
-        height: 20px;
-        border: $border;
-        border-radius: $p_2;
-        transform: translate(20%, 20%);
-        -webkit-transform: translate(20%, 20%);
-        -ms-transform: translate(20%, 20%);
-    }
-    .auth-sms input:checked+label::before {
-        width: 16px;
-        height: 16px;
-        background: $color_3;
-        border-radius: $p_2;
-        transform: translate(37%, 39%);
-        -webkit-transform: translate(37%, 39%);
-        -ms-transform: translate(37%, 39%);
+        .flex {
+            display: flex;
+        }
+        .forgot {
+            float: right;
+            margin: 0 $m_1 $m_3;
+        }
+        .flex-row {
+            @extend .flex;
+            justify-content: space-between;
+        }
+        .field-wrap {
+            margin: $m_3 $m_1;
+        }
+        .button {
+            width: 100%;
+            border: 0;
+            font: {
+                size: $fz32;
+                weight: 600;
+            }
+            background: $color_1;
+            color: $color_2;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            padding: $p_3 0;
+            cursor: pointer;
+            -webkit-transition: all $transition;
+            -o-transition: all $transition;
+            transition: all $transition;
+        }
+        .link {
+            display: inline-block;
+            text-decoration: none;
+            padding: $p_2;
+            background: rgba(166, 126, 218, 0.5098039216);
+            color: $color_3;
+            font-size: $fz22;
+            width: 50%;
+            text-align: center;
+            cursor: pointer;
+            -webkit-transition: $transition;
+            -o-transition: $transition;
+            transition: $transition;
+            @media screen and (max-width: 600px) {
+                width: 100%;
+                font-size: inherit;
+            }
+        }
+        .sex-box label,
+        .country-box label,
+        .auth-sms label {
+            cursor: pointer;
+            font-size: $fz18;
+            padding: 0 0 0 $p_5;
+            @media screen and (max-width: 600px) {
+                padding: 0 0 0 8%;
+                font-size: inherit;
+            }
+        }
+        .auth-sms label {
+            @media screen and (max-width: 600px) {
+                padding: $m_1 0 0 10%;
+            }
+        }
+        .country-box label {
+            padding: 0 0 0 7%;
+            margin: $m_1 0;
+        }
+        .country-wrap {
+            position: relative;
+            .country-box {
+                position: absolute;
+                z-index: 2;
+                width: 50%;
+                background: $back_2;
+                box-shadow: $b_shadow;
+                -webkit-box-shadow: $b_shadow;
+                padding: $m_1;
+                flex-direction: column;
+                @media screen and (max-width: 600px) {
+                    width: 100%;
+                }
+            }
+        }
+        .sex-box input:checked+label::before,
+        .country-box input:checked+label::before,
+        .sex-box label::after,
+        .country-box label::after,
+        .auth-sms label::after,
+        .auth-sms input:checked+label::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+        }
+        .sex-box input:checked+label::before,
+        .country-box input:checked+label::before {
+            background: $color_3;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            transform: translate(13%, 15%);
+            -webkit-transform: translate(13%, 15%);
+            -ms-transform: translate(13%, 15%);
+        }
+        .sex-box label::after,
+        .country-box label::after {
+            width: 20px;
+            height: 20px;
+            border: $border;
+            border-radius: 50%;
+        }
+        .sex-box label::after, .sex-box label::before {
+            transform: translate(20%, 20%);
+            -webkit-transform: translate(20%, 20%);
+            -ms-transform: translate(20%, 20%);
+        }
+        .sex-box input:checked + label::before {
+            transform: translate(37%, 37%);
+            -webkit-transform: translate(37%, 37%);
+            -ms-transform: translate(37%, 37%);
+        }
+        .auth-sms label::after {
+            width: 20px;
+            height: 20px;
+            border: $border;
+            border-radius: $p_2;
+            transform: translate(20%, 20%);
+            -webkit-transform: translate(20%, 20%);
+            -ms-transform: translate(20%, 20%);
+        }
+        .auth-sms input:checked+label::before {
+            width: 16px;
+            height: 16px;
+            background: $color_3;
+            border-radius: $p_2;
+            transform: translate(37%, 39%);
+            -webkit-transform: translate(37%, 39%);
+            -ms-transform: translate(37%, 39%);
+        }
     }
 }
 
-.flex {
-    display: flex;
-}
-
-.forgot {
-    float: right;
-    margin: 0 $m_1 $m_3;
-}
-
-a:hover {
-    color: $color_3;
-}
 
 input:focus {
     border-color: $color_3;
 }
 
 input:focus::-moz-placeholder,
-textarea:focus::-moz-placeholder,
 input:focus:-moz-placeholder,
-textarea:focus:-moz-placeholder,
 input:focus:-ms-input-placeholder,
-textarea:focus:-ms-input-placeholder,
-input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder,
-input.placeholder:focus,
-textarea.placeholder:focus {
+input:focus::-webkit-input-placeholder {
     color: $back_1;
 }
 
